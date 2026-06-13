@@ -1,11 +1,18 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
+import { createBrowserRouter, RouterProvider } from "react-router"
 import FetchingTester from "./FetchingTester.jsx"
-import Header from "./components/Header.jsx"
+import App from "./routes/App.jsx"
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />
+  }
+]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FetchingTester />
-    <Header />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
