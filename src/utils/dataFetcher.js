@@ -3,7 +3,7 @@ import { BASE_API_CARDS, API_KEY } from './constants';
 
 const PAGE_SIZE = 25;
 
-const useAllPokemonData = (pageNumber = 10) => {
+const usePagePokemonData = (pageNumber = 1) => {
   const [data, setData] = useState(null);
   const [totalCount, setTotalCount] = useState(0);
   const [error, setError] = useState(null);
@@ -44,4 +44,4 @@ const useAllPokemonData = (pageNumber = 10) => {
   }
 }
 
-export { useAllPokemonData }
+export { usePagePokemonData }
