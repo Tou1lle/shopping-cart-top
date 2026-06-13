@@ -3,20 +3,18 @@ import { BASE_API_CARDS, API_KEY } from './constants';
 
 const PAGE_SIZE = 25;
 
-const useAllPokemonData = (pageNumber = 2) => {
+const useAllPokemonData = (pageNumber = 10) => {
   const [data, setData] = useState(null);
+  const [totalCount, setTotalCount] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const pageAPI = Math.ceil(pageNumber / 10);
-  const sliceStart = (((pageNumber % 10) - 1) * PAGE_SIZE);
-  const sliceEnd = sliceStart + PAGE_SIZE;
-
-  const params = new URLSearchParams({
-    page: pageAPI
-  });
-
   useEffect(() => {
+    const pageAPI = Math.ceil(pageNumber / 10);
+    const params = new URLSearchParams({ page: pageAPI });
+    const sliceStart = (((pageNumber - 1) % 10) * PAGE_SIZE);
+    const sliceEnd = sliceStart + PAGE_SIZE;
+
     fetch(BASE_API_CARDS + `?${params}`, {
       headers: {
         'X-API-Key': API_KEY
@@ -31,13 +29,19 @@ const useAllPokemonData = (pageNumber = 2) => {
     .then(data => {
       const pageCards = data.data.slice(sliceStart, sliceEnd);
       setData(pageCards);
+      setTotalCount(data.totalCount);
       console.log(pageCards);
     })
     .catch(error => setError(error))
     .finally(() => setLoading(false));
-  }, []);
+  }, [pageNumber]);
 
-  return { data, error, loading }
+  return { 
+    data, 
+    error, 
+    loading,
+    totalCount
+  }
 }
 
 export { useAllPokemonData }
