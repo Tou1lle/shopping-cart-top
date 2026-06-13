@@ -1,6 +1,6 @@
 import { usePagePokemonData } from './utils/dataFetcher';
 
-function AppTester() {
+function FetchingTester() {
   const { data, error, loading, totalCount } = usePagePokemonData();
 
   if (loading) return <p>Loading...</p>
@@ -20,4 +20,4 @@ function AppTester() {
   )
 }
 
-export default AppTester;
+export default FetchingTester;
