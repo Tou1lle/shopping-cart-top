@@ -1,0 +1,26 @@
+:root {
+  --heading-XL: 32px;
+  --heading-L: 26px;
+  --heading-M: 22px;
+  --heading-S: 20px;
+
+  --font-base: 16px;
+  --font-secondary-base: 14px;
+  --font-S: 12px;
+  --font-XS: 10px;
+
+  --color-text-special: #F7E950;
+  --color-text-primary: #E8E8ED;
+  --color-text-secondary: #8888a0;
+  --color-inactive-text: #606067;
+
+  --header-bg: #232325;
+  --body-bg: #2C2C30;
+  --pagination-yellow: #F2EA97;
+  --card-item-bg: #1E1E1E;
+  --disabled-btn: #4A4A4F;
+  --inactive-btn: #606067;
+  --active-btn: #8D8D96;
+  --element-border-base: #8D8D96;
+  --element-border-active: #E8E8ED;
+}

@@ -1,7 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router"
-import FetchingTester from "./FetchingTester.jsx"
 import App from "./routes/App.jsx"
 
 const router = createBrowserRouter([
