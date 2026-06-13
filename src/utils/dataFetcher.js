@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { BASE_API_CARDS, API_KEY } from './constants';
+import { useEffect, useState } from "react"
+import { BASE_API_CARDS, API_KEY } from "./constants";
 
 const PAGE_SIZE = 25;
 
@@ -17,12 +17,12 @@ const usePagePokemonData = (pageNumber = 1) => {
 
     fetch(BASE_API_CARDS + `?${params}`, {
       headers: {
-        'X-API-Key': API_KEY
+        "X-API-Key": API_KEY
       }
     })
     .then(response => {
       if (response.status >= 400) {
-        throw new Error('server error');
+        throw new Error("server error");
       }
       return response.json();
     })
