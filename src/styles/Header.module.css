@@ -30,9 +30,11 @@
 .header-navigation {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   padding: var(--padding-M);
   color: var(--color-inactive-text);
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {

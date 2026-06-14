@@ -10,10 +10,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--padding-S);
   color: var(--color-text-special);
   padding: var(--padding-XL);
   max-width: var(--width-threshold);
+}
+
+.footer > * {
+  min-width: 0;
 }
 
 .footer-image-container {
@@ -24,6 +27,7 @@
 .footer-content {
   display: flex;
   width: 100%;
+  gap: var(--padding-L);
 }
 
 .footer-subscribe h3,
@@ -111,4 +115,31 @@
 
 .link:hover {
   color: var(--color-text-primary);
+}
+
+.footer-subscribe p,
+.link {
+  word-break: break-all;
+}
+
+@media (max-width: 850px) {
+  .footer {
+    padding: var(--padding-S);
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-M);
+  }
+
+  .footer-subscribe {
+    gap: var(--padding-M);
+  }
+
+  .form-subscription {
+    flex-direction: column;
+    gap: var(--padding-S);
+  }
 }
