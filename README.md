@@ -1,16 +1,32 @@
-# React + Vite
+# Shopping Cart - Pokémon
+A simple "E-Shop" website following The Odin Project curriculum.
+Project instructions can be found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Figma
+The Pokémon Shop is designed in Figma: [Pokemon Shopping Cart](https://www.figma.com/design/H9y352ZqfiJ0fRHFuFdF3Y/Pokemon-Shopping-Cart?node-id=1-2&p=f&t=Ct1uBDPZvE5kH48D-0)
 
-Currently, two official plugins are available:
+## Project Structure
+The Pokémon Shopping Cart is structured accordingly:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Homepage
+Homepage default state:
+![Homepage](screenshots/figma-homepage.png)
 
-## React Compiler
+Homepage expanded info:
+![Homepage with expanded info](screenshots/figma-homepage2.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Shop
+Shop page with items - 25 cards per page
+![Shop page](screenshots/figma-shoppage.png)
 
-## Expanding the ESLint configuration
+### Item
+![Item page](screenshots/figma-itempage.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### About Us
+//TODO
+
+### Wishlist
+//TODO
+
+### Cart
+//TODO
