@@ -1,8 +1,16 @@
+.header-container {
+  background-color: var(--header-bg);
+  display: flex;
+  justify-content: center;
+}
+
 .body-header {
+  flex-grow: 1;
   display: flex;
   background-color: var(--header-bg);
   justify-content: space-between;
   padding: var(--padding-S);
+  max-width: var(--width-threshold);
 }
 
 .header-image-container {
