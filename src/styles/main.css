@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "My-Pokemon-Font";
+  src: url("./../assets/fonts/goldman/Goldman-Regular.woff2") format("woff2");
+}
+
 :root {
   --heading-XL: 32px;
   --heading-L: 26px;
@@ -23,4 +28,29 @@
   --active-btn: #8D8D96;
   --element-border-base: #8D8D96;
   --element-border-active: #E8E8ED;
+
+  --padding-S: 10px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  font-family: "My-Pokemon-Font", Arial, Helvetica, sans-serif;
+}
+
+.link {
+  text-decoration: none;
 }
