@@ -3,7 +3,6 @@ import pokemonLogoURL from "./../assets/images/pokemon-logo.png";
 import Navigation from "./Navigation";
 
 function Header() {
-
   return (
     <header className={styles["body-header"]}>
       <div className={styles["header-image-container"]}>

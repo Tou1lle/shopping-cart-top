@@ -45,8 +45,13 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-body {
+#root {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
   background-color: var(--body-bg);
   font-family: "My-Pokemon-Font", Arial, Helvetica, sans-serif;
 }

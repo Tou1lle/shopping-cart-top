@@ -3,9 +3,10 @@ import Header from "../components/Header";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <div className="main" style={{flexGrow: 1}}>Content</div>
+    </>
   )
 }
 
