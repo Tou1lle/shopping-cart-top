@@ -31,6 +31,13 @@
 
   --padding-S: 10px;
   --padding-M: 20px;
+  --padding-L: 30px;
+  --padding-XL: 40px;
+
+  --border-radius-S: 5px;
+  --border-radius-M: 10px;
+
+  --width-threshold: 1440px;
 }
 
 *,
