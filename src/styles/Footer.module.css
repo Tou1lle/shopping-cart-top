@@ -117,11 +117,6 @@
   color: var(--color-text-primary);
 }
 
-.footer-subscribe p,
-.link {
-  word-break: break-all;
-}
-
 @media (max-width: 850px) {
   .footer {
     padding: var(--padding-S);
