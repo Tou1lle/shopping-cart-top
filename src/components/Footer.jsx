@@ -9,8 +9,8 @@ function Footer() {
       <div className={styles["footer-image-container"]}>
         <img src={pokemonLogoURL} alt="Pokémon logo" />
       </div>
-      <div>
-        <div>
+      <div className={styles["footer-content"]}>
+        <div className={styles["footer-subscribe"]}>
           <div>
             <h3>Stay in touch!</h3>
             <p>Stay up to date with the latest Pokémon TCG releases
@@ -23,7 +23,7 @@ function Footer() {
             <button>SUBMIT</button>
           </form>
         </div>
-        <div>
+        <div className={styles["footer-links"]}>
           <div>
             <h3>Shop</h3>
             <nav>

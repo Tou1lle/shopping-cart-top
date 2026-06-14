@@ -10,3 +10,16 @@
   max-width: 500px;
   min-width: 300px;
 }
+
+.footer-content {
+  display: flex;
+  width: 100%;
+}
+
+.footer-links {
+  flex-grow: 1;
+}
+
+.footer-subscribe {
+  max-width: 500px;
+}
