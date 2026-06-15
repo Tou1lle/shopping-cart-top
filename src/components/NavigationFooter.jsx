@@ -30,7 +30,7 @@ function Navigation() {
         </nav>
       </div>
     </div>
-  )
+  );
 }
 
 export default Navigation;

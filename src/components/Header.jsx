@@ -16,7 +16,7 @@ function Header() {
         <Navigation />
       </header>
     </div>
-  )
+  );
 }
 
 export default Header;

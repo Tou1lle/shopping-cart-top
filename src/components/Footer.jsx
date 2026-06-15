@@ -2,7 +2,6 @@ import styles from "./../styles/Footer.module.css";
 import pokemonLogoURL from "./../assets/images/pokemon-logo.png";
 import Navigation from "./NavigationFooter";
 
-
 function Footer() {
   return (
     <div className={styles["footer-container"]}>
@@ -14,9 +13,10 @@ function Footer() {
           <div className={styles["footer-subscribe"]}>
             <div className={styles["footer-outro"]}>
               <h3>Stay in touch!</h3>
-              <p>Stay up to date with the latest Pokémon TCG releases
-                , rare card drops, restocks, and exclusive offers.
-                Join our community of collectors and trainers and never miss the next big pull.
+              <p>
+                Stay up to date with the latest Pokémon TCG releases , rare card
+                drops, restocks, and exclusive offers. Join our community of
+                collectors and trainers and never miss the next big pull.
               </p>
             </div>
             <form
@@ -24,10 +24,7 @@ function Footer() {
               onSubmit={(e) => e.preventDefault()}
               className={styles["form-subscription"]}
             >
-              <input
-                type="text"
-                className={styles["email-input"]}
-              />
+              <input type="text" className={styles["email-input"]} />
               <button className={styles["email-submit"]}>SUBMIT</button>
             </form>
           </div>
@@ -35,7 +32,7 @@ function Footer() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 export default Footer;
