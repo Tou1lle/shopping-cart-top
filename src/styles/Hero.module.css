@@ -4,14 +4,39 @@
   background-image: url(./../assets/images/pokemon-grass-bg.jpg);
   background-size: contain;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .hero-header {
   font-size: var(--heading-L);
+  padding: var(--padding-M);
 }
 
 .hero-content {
   max-width: var(--width-max-content);
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.pokemon-animal-container-right,
+.pokemon-animal-container-left {
+  position: absolute;
+  bottom: 20px;
+}
+
+.pokemon-animal-container-right {
+  left: 10px;
+}
+
+.pokemon-animal-container-left {
+  right: 10px;
+}
+
+.pokemon-animal-right,
+.pokemon-animal-left {
+  width: 70px;
+  height: 70px;
 }
