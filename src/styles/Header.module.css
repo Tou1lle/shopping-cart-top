@@ -13,9 +13,20 @@
   max-width: var(--width-threshold);
 }
 
-.header-image-container {
+.header-logo-container {
   min-width: 150px;
   max-width: 250px;
+}
+
+.header-logo {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
 }
 
 .link-header-navigation {

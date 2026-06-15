@@ -6,11 +6,11 @@ function Header() {
   return (
     <div className={styles["header-container"]}>
       <header className={styles["body-header"]}>
-        <div className={styles["header-image-container"]}>
+        <div className={styles["header-logo-container"]}>
           <img
             src={pokemonLogoURL}
             alt="Logo of Pokemon"
-            className="pokemon-logo header-logo"
+            className={styles["header-logo"]}
           />
         </div>
         <Navigation />
