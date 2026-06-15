@@ -1,4 +1,4 @@
-import { usePagePokemonData } from "./utils/dataFetcher";
+import { usePagePokemonData, getYourPrice } from "./utils/dataFetcher";
 
 function FetchingTester() {
   const { data, error, loading, totalCount } = usePagePokemonData();
@@ -12,7 +12,7 @@ function FetchingTester() {
       <ul>
         {data.map(pokemon => {
           return (
-            <li>{pokemon.name}</li>
+            <li>{getYourPrice(pokemon, "tcgplayer")}</li>
           )
         })}
       </ul>
