@@ -14,20 +14,20 @@
   --font-S: 12px;
   --font-XS: 10px;
 
-  --color-text-special: #F7E950;
-  --color-text-primary: #E8E8ED;
+  --color-text-special: #f7e950;
+  --color-text-primary: #e8e8ed;
   --color-text-secondary: #8888a0;
   --color-inactive-text: #606067;
 
   --header-bg: #232325;
-  --body-bg: #2C2C30;
-  --pagination-yellow: #F2EA97;
-  --card-item-bg: #1E1E1E;
-  --disabled-btn: #4A4A4F;
+  --body-bg: #2c2c30;
+  --pagination-yellow: #f2ea97;
+  --card-item-bg: #1e1e1e;
+  --disabled-btn: #4a4a4f;
   --inactive-btn: #606067;
-  --active-btn: #8D8D96;
-  --element-border-base: #8D8D96;
-  --element-border-active: #E8E8ED;
+  --active-btn: #8d8d96;
+  --element-border-base: #8d8d96;
+  --element-border-active: #e8e8ed;
 
   --padding-S: 10px;
   --padding-M: 20px;
@@ -49,7 +49,11 @@
   box-sizing: border-box;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }

@@ -1,0 +1,13 @@
+.card-container {
+  height: auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-S);
+  align-items: center;
+}
+
+.card-name {
+  font-size: var(--heading-M);
+  text-align: center;
+}

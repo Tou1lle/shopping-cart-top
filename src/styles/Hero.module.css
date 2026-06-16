@@ -2,7 +2,9 @@
   flex-grow: 1;
   max-height: 650px;
   background-image: url(./../assets/images/pokemon-grass-bg.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +14,7 @@
 .hero-header {
   font-size: var(--heading-L);
   padding: var(--padding-M);
+  text-align: center;
 }
 
 .hero-content {
@@ -19,6 +22,8 @@
   position: relative;
   flex-grow: 1;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pokemon-animal-container-right,
@@ -39,4 +44,10 @@
 .pokemon-animal-left {
   width: 70px;
   height: 70px;
+}
+
+.cards-container {
+  display: flex;
+  gap: var(--padding-L);
+  padding: 0 var(--padding-M) var(--padding-XL);
 }

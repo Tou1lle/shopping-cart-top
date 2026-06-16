@@ -31,7 +31,8 @@
 }
 
 .footer-subscribe h3,
-.footer-interactive, h3 {
+.footer-interactive,
+h3 {
   font-size: var(--heading-S);
 }
 
@@ -121,7 +122,7 @@
   .footer {
     padding: var(--padding-S);
   }
-  
+
   .footer-content {
     flex-direction: column;
     justify-content: center;
