@@ -12,8 +12,24 @@
   text-align: center;
 }
 
+.card-image-container {
+  position: relative;
+}
+
+.card-image-container .card-image-back {
+  position: absolute;
+}
+
+.card-image-back {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-image-back:hover {
+  transform: translateY(-5%);
+}
+
 @media (max-width: 600px) {
   .card-name {
     font-size: var(--heading-S);
-  } 
+  }
 }
