@@ -24,6 +24,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0 var(--padding-S);
 }
 
 .pokemon-animal-container-right,
@@ -49,5 +50,12 @@
 .cards-container {
   display: flex;
   gap: var(--padding-L);
-  padding: 0 var(--padding-M) var(--padding-XL);
+  padding: 0 0 var(--padding-XL) 0;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .hero-header {
+    font-size: var(--padding-M);
+  }
 }
