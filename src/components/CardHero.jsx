@@ -2,10 +2,14 @@ import cardBackURL from "./../assets/images/pokemon-card-back.png";
 import cardFrontURL from "./../assets/images/pokemon-card-front.png";
 import styles from "./../styles/CardHero.module.css";
 
-function CardHero() {
-  if (!true) {
+function CardHero({ loading = true }) {
+  if (loading) {
     return (
       <div className={styles["card-container"]}>
+        <h2 className={styles["card-name"]}>Catching!</h2>
+        <div className={styles["card-empty"]}>
+          Spin
+        </div>
       </div>
     )
   }

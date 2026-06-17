@@ -48,6 +48,8 @@
 }
 
 .cards-container {
+  max-width: var(--hero-content-max-width);
+  width: 100%;
   display: flex;
   gap: var(--padding-L);
   padding: 0 0 var(--padding-XL) 0;
