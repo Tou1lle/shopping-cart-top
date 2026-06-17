@@ -50,8 +50,30 @@
   opacity: 0.5;
 }
 
+.loading-spinner {
+  position: absolute;
+  width: var(--spinner-M);
+  height: var(--spinner-M);
+  border: var(--spinner-thick-M) solid var(--pokemon-logo-blue);
+  border-top: var(--spinner-thick-M) solid var(--pokemon-logo-yellow);
+  border-radius: 50%;
+  top: calc(50% - var(--spinner-M) / 2);
+  left: calc(50% - var(--spinner-M) / 2);
+  animation: spin 1s linear infinite;
+}
+
 @media (max-width: 600px) {
   .card-name {
     font-size: var(--heading-S);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

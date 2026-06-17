@@ -8,7 +8,7 @@ function CardHero({ loading = true }) {
       <div className={styles["card-container"]}>
         <h2 className={styles["card-name"]}>Catching!</h2>
         <div className={styles["card-empty"]}>
-          Spin
+          <div className={styles["loading-spinner"]}></div>
         </div>
       </div>
     )
