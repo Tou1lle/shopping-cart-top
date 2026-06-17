@@ -10,11 +10,11 @@ function TopCardsHero() {
   return (
     <div className={styles["cards-container"]}>
       {loading 
-      && Array.from({ length: limit}, () => {
-        return <CardHeroEmpty />
+      && Array.from({ length: limit}, (_, i) => {
+        return <CardHeroEmpty key={i} />
       }) 
       || data.map(pokemon => {
-        return <CardHero pokemon={pokemon} />
+        return <CardHero key={pokemon.id} pokemon={pokemon} />
       })}
     </div>
   )
