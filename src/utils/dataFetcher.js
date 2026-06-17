@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BASE_API_CARDS, API_KEY } from "./constants";
+import { sampleSize } from "lodash";
 
 const PAGE_SIZE = 25;
 
@@ -44,28 +45,39 @@ const usePagePokemonData = (pageNumber = 1) => {
   };
 };
 
-/*
 const useTopCards = (limit = 3) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  fetch(BASE_API_CARDS + `?${params}`, {
-    headers: {
-      "X-API-Key": API_KEY
-    }
-  })
-    .then(response => {
-      if (response.status >= 400) {
-        throw new Error("server error");
-      }
-      return response.json();
+  useEffect(() => {
+    fetch(BASE_API_CARDS, {
+      headers: {
+        "X-API-Key": API_KEY,
+      },
     })
-    .then(data => {
-      const cards = data.data;
-    })
-}
-*/
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("server error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const cards = data.data;
+        const topCards = sampleSize(cards, limit);
+        setData(topCards);
+        console.log(topCards);
+      })
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, [limit]);
+
+  return {
+    data,
+    loading,
+    error,
+  };
+};
 
 const getYourPrice = (card, marketType = "tcgplayer") => {
   if (!card[marketType]) {
@@ -86,4 +98,4 @@ const getYourPrice = (card, marketType = "tcgplayer") => {
   return yourPrice;
 };
 
-export { usePagePokemonData, getYourPrice };
+export { usePagePokemonData, useTopCards, getYourPrice };

@@ -25,6 +25,7 @@
 }
 
 .card-image-back:hover {
+  cursor: pointer;
   transform: translateY(-5%);
 }
 
