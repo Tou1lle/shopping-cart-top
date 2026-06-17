@@ -1,7 +1,7 @@
 import styles from "./../styles/Hero.module.css";
 import pokemonGifURL_1 from "./../assets/images/blastoise-animated.gif";
 import pokemonGifUrl_2 from "./../assets/images/drat-animated.gif";
-import CardHero from "./CardHero";
+import TopCardsHero from "./TopCardsHero";
 
 function Hero() {
   return (
@@ -22,11 +22,7 @@ function Hero() {
             alt="Gif image of a Pokémon"
           />
         </div>
-        <div className={styles["cards-container"]}>
-          <CardHero />
-          <CardHero />
-          <CardHero />
-        </div>
+        <TopCardsHero />
       </div>
     </div>
   );

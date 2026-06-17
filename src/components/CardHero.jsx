@@ -1,22 +1,10 @@
 import cardBackURL from "./../assets/images/pokemon-card-back.png";
-import cardFrontURL from "./../assets/images/pokemon-card-front.png";
 import styles from "./../styles/CardHero.module.css";
 
-function CardHero({ loading = true }) {
-  if (loading) {
-    return (
-      <div className={styles["card-container"]}>
-        <h2 className={styles["card-name"]}>Catching!</h2>
-        <div className={styles["card-empty"]}>
-          <div className={styles["loading-spinner"]}></div>
-        </div>
-      </div>
-    )
-  }
-
+function CardHero({ pokemon }) {
   return (
     <div className={styles["card-container"]}>
-      <h2 className={styles["card-name"]}>Pokemon Name</h2>
+      <h2 className={styles["card-name"]}>{pokemon.name}</h2>
       <div className={styles["card-image-container"]}>
         <img
           src={cardBackURL}
@@ -26,7 +14,7 @@ function CardHero({ loading = true }) {
             e.currentTarget.style.transform = "translateY(-150%)";
           }}
         />
-        <img src={cardFrontURL} alt="Pokemon Card Front" />
+        <img src={pokemon.images.large} alt="Pokemon Card Front" />
       </div>
     </div>
   );
