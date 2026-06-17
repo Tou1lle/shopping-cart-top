@@ -3,6 +3,13 @@ import cardFrontURL from "./../assets/images/pokemon-card-front.png";
 import styles from "./../styles/CardHero.module.css";
 
 function CardHero() {
+  if (!true) {
+    return (
+      <div className={styles["card-container"]}>
+      </div>
+    )
+  }
+
   return (
     <div className={styles["card-container"]}>
       <h2 className={styles["card-name"]}>Pokemon Name</h2>

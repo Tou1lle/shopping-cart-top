@@ -24,7 +24,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 var(--padding-S);
 }
 
 .pokemon-animal-container-right,
@@ -50,7 +49,7 @@
 .cards-container {
   display: flex;
   gap: var(--padding-L);
-  padding: 0 0 var(--padding-XL) 0;
+  padding: 0 var(--padding-S) var(--padding-XL);
   overflow: hidden;
 }
 

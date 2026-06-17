@@ -39,6 +39,8 @@
 
   --width-threshold: 1440px;
   --width-max-content: 1300px;
+
+  --card-aspect-ratio: 420 / 590;
 }
 
 *,
