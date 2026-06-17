@@ -1,5 +1,5 @@
-import styles from "./../styles/Header.module.css";
-import pokemonLogoURL from "./../assets/images/pokemon-logo.png";
+import styles from "./../../styles/Header.module.css";
+import pokemonLogoURL from "./../../assets/images/pokemon-logo.png";
 import Navigation from "./NavigationHeader";
 
 function Header() {

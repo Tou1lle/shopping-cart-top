@@ -1,4 +1,4 @@
-import styles from "./../styles/WelcomeText.module.css";
+import styles from "./../../styles/WelcomeText.module.css";
 
 function WelcomeText() {
   return (

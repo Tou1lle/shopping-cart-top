@@ -1,8 +1,8 @@
 import "./../styles/main.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import WelcomeText from "../components/WelcomeText";
+import Header from "../components/homepage/Header";
+import Footer from "../components/homepage/Footer";
+import Hero from "../components/homepage/Hero";
+import WelcomeText from "../components/homepage/WelcomeText";
 
 function App() {
   return (

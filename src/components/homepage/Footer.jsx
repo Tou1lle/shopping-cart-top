@@ -1,5 +1,5 @@
-import styles from "./../styles/Footer.module.css";
-import pokemonLogoURL from "./../assets/images/pokemon-logo.png";
+import styles from "./../../styles/Footer.module.css";
+import pokemonLogoURL from "./../../assets/images/pokemon-logo.png";
 import Navigation from "./NavigationFooter";
 
 function Footer() {
