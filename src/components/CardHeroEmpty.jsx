@@ -1,4 +1,4 @@
-import styles from "./../styles/CardHero.module.css"
+import styles from "./../styles/CardHero.module.css";
 
 function CardHeroEmpty() {
   return (
@@ -8,7 +8,7 @@ function CardHeroEmpty() {
         <div className={styles["loading-spinner"]}></div>
       </div>
     </div>
-  )
+  );
 }
 
 export default CardHeroEmpty;

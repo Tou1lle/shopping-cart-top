@@ -3,6 +3,12 @@
   src: url("./../assets/fonts/goldman/Goldman-Regular.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "My-Pokemon-Handwrite";
+  src: url(./../assets/fonts/indie-flower/IndieFlower-Regular.woff2)
+    format("woff2");
+}
+
 :root {
   --heading-XL: 32px;
   --heading-L: 26px;
@@ -29,13 +35,17 @@
   --element-border-base: #8d8d96;
   --element-border-active: #e8e8ed;
 
-  --pokemon-logo-blue: #3D7DCA;
-  --pokemon-logo-yellow: #FFCB05;
+  --pokemon-logo-blue: #3d7dca;
+  --pokemon-logo-yellow: #ffcb05;
 
   --padding-S: 10px;
   --padding-M: 20px;
   --padding-L: 30px;
   --padding-XL: 40px;
+
+  --padding-welcome-L: 100px;
+  --padding-welcome-M: 50px;
+  --padding-welcome-S: 25px;
 
   --border-radius-S: 5px;
   --border-radius-M: 10px;
@@ -48,7 +58,7 @@
 
   --spinner-S: 30px;
   --spinner-M: 80px;
-  --spinner-L: 100px; 
+  --spinner-L: 100px;
 
   --spinner-thick-S: 5px;
   --spinner-thick-M: 10px;
@@ -82,6 +92,7 @@ svg {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  gap: var(--padding-L);
 }
 
 body {

@@ -1,0 +1,39 @@
+.welcome-text-container {
+  max-width: var(--width-max-content);
+  width: 100%;
+  text-align: center;
+  padding: var(--padding-welcome-L);
+  border: 5px solid var(--color-text-special);
+  margin: auto;
+  border-radius: 25px;
+  color: var(--color-text-special);
+}
+
+.welcome-quote {
+  font-family: "My-Pokemon-Handwrite", Arial, Helvetica, sans-serif;
+  font-size: var(--heading-L);
+}
+
+.welcome-author {
+  font-size: var(--heading-M);
+}
+
+@media (max-width: 768px) {
+  .welcome-text-container {
+    padding: var(--padding-welcome-M);
+  }
+
+  .welcome-quote {
+    font-size: var(--heading-S);
+  }
+
+  .welcome-author {
+    font-size: var(--font-base);
+  }
+}
+
+@media (max-width: 550px) {
+  .welcome-text-container {
+    padding: var(--padding-welcome-S);
+  }
+}
