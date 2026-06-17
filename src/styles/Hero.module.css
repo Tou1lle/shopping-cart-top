@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 var(--padding-S);
 }
 
 .hero-header {
@@ -49,7 +50,7 @@
 .cards-container {
   display: flex;
   gap: var(--padding-L);
-  padding: 0 var(--padding-S) var(--padding-XL);
+  padding: 0 0 var(--padding-XL) 0;
   overflow: hidden;
 }
 
