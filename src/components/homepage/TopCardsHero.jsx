@@ -1,5 +1,5 @@
-import styles from "./../../styles/Hero.module.css";
-import { useTopCards } from "./../../utils/dataFetcher";
+import styles from "/src/styles/homepage/Hero.module.css";
+import { useTopCards } from "/src/utils/dataFetcher";
 import CardHero from "./CardHero";
 import CardHeroEmpty from "./CardHeroEmpty";
 

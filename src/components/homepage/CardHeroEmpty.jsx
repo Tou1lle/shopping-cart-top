@@ -1,4 +1,4 @@
-import styles from "./../../styles/CardHero.module.css";
+import styles from "/src/styles/homepage/CardHero.module.css";
 
 function CardHeroEmpty() {
   return (
