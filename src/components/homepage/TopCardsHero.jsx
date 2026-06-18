@@ -1,4 +1,4 @@
-import styles from "./../../styles/Hero.module.css";
+import styles from "./../../styles/homepage/Hero.module.css";
 import { useTopCards } from "./../../utils/dataFetcher";
 import CardHero from "./CardHero";
 import CardHeroEmpty from "./CardHeroEmpty";

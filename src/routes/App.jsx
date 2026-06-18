@@ -5,6 +5,7 @@ import Hero from "../components/homepage/Hero";
 import WelcomeText from "../components/homepage/WelcomeText";
 import PokeballRules from "../components/homepage/PokeballRules";
 import ButtonToShop from "../components/homepage/ButtonToShop";
+import OutroImage from "../components/homepage/OutroImage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <WelcomeText />
         <PokeballRules />
         <ButtonToShop />
+        <OutroImage />
       </div>
       <Footer />
     </>

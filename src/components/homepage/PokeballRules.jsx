@@ -1,4 +1,4 @@
-import styles from "./../../styles/PokeballRules.module.css";
+import styles from "./../../styles/homepage/PokeballRules.module.css";
 import pokeballTop from "./../../assets/images/pokeball-top-half.png";
 import pokeballBot from "./../../assets/images/pokeball-bottom-half.png";
 

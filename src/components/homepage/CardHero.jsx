@@ -1,5 +1,5 @@
 import cardBackURL from "./../../assets/images/pokemon-card-back.png";
-import styles from "./../../styles/CardHero.module.css";
+import styles from "./../../styles/homepage/CardHero.module.css";
 
 function CardHero({ pokemon }) {
   return (

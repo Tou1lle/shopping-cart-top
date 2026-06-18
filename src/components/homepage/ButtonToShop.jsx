@@ -1,4 +1,4 @@
-import styles from "./../../styles/ButtonToShop.module.css";
+import styles from "./../../styles/homepage/ButtonToShop.module.css";
 import { Link } from "react-router";
 
 function ButtonToShop() {

@@ -1,4 +1,4 @@
-import styles from "./../../styles/Hero.module.css";
+import styles from "./../../styles/homepage/Hero.module.css";
 import pokemonGifURL_1 from "./../../assets/images/blastoise-animated.gif";
 import pokemonGifUrl_2 from "./../../assets/images/drat-animated.gif";
 import TopCardsHero from "./TopCardsHero";
