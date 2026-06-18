@@ -1,0 +1,15 @@
+.link-btn-shop {
+  margin: auto;
+  margin-bottom: var(--padding-XL);
+  font-size: var(--heading-L);
+  background-color: var(--color-text-special);
+  color: #000000;
+  font-family: inherit;
+  font-weight: 800;
+  padding: var(--padding-S) var(--padding-L);
+  border-radius: 15px;
+}
+
+.link-btn-shop:hover {
+  box-shadow: inset 0px 0px 10px #000000;
+}
