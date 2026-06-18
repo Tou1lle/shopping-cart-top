@@ -1,7 +1,7 @@
 .hero-container {
   flex-grow: 1;
   max-height: 650px;
-  background-image: url(/src/assets/images/pokemon-grass-bg.jpg);
+  background-image: url(./../assets/images/pokemon-grass-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;

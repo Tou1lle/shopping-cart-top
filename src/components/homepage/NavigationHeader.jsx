@@ -1,4 +1,4 @@
-import styles from "/src/styles/Header.module.css";
+import styles from "./../../styles/Header.module.css";
 import { Link } from "react-router";
 
 function Navigation() {

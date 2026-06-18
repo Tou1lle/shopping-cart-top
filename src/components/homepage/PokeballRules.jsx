@@ -1,6 +1,6 @@
-import styles from "/src/styles/homepage/PokeballRules.module.css";
-import pokeballTop from "/src/assets/images/pokeball-top-half.png";
-import pokeballBot from "/src/assets/images/pokeball-bottom-half.png";
+import styles from "./../../styles/PokeballRules.module.css";
+import pokeballTop from "./../../assets/images/pokeball-top-half.png";
+import pokeballBot from "./../../assets/images/pokeball-bottom-half.png";
 
 function PokeballRules() {
   const handleClick = () => {
