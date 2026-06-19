@@ -7,7 +7,7 @@ function PokeballRules() {
     const pokeballRules = document.querySelector(
       `.${styles["pokeball-rules"]}`,
     );
-    pokeballRules.classList.toggle(styles.hidden);
+    pokeballRules.classList.toggle(styles.visible);
   };
 
   return (
@@ -22,7 +22,6 @@ function PokeballRules() {
       <div
         className={`
           ${styles["pokeball-rules"]}
-          ${styles["hidden"]}
       `}
       >
         <section className={styles["rules-section"]}>

@@ -13,7 +13,7 @@ function Homepage() {
       <ButtonToShop />
       <OutroImage />
     </div>
-  )
+  );
 }
 
 export default Homepage;
