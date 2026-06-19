@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BASE_API_CARDS, API_KEY } from "./constants";
+import { BASE_API_CARDS, BASE_API, API_KEY } from "./constants";
 import { sampleSize } from "lodash";
 
 const PAGE_SIZE = 25;
@@ -79,6 +79,40 @@ const useTopCards = (limit = 3) => {
   };
 };
 
+const useFilterData = (type) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(BASE_API + `/${type}`, {
+      headers: {
+        "X-API-Key": API_KEY,
+      },
+    })
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("server error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const filters = data.data;
+        console.log(filters);
+        setData(filters);
+      })
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, [type]);
+
+  return {
+    data,
+    error,
+    loading,
+  };
+};
+
+
 const getYourPrice = (card, marketType = "tcgplayer") => {
   if (!card[marketType]) {
     return "Price NOT Available:(";
@@ -98,4 +132,4 @@ const getYourPrice = (card, marketType = "tcgplayer") => {
   return yourPrice;
 };
 
-export { usePagePokemonData, useTopCards, getYourPrice };
+export { usePagePokemonData, useTopCards, useFilterData, getYourPrice };
