@@ -88,11 +88,20 @@ svg {
   flex-direction: column;
 }
 
-.main-body.homepage {
+.main-body {
   flex-grow: 1;
+}
+
+.main-body.homepage,
+.main-body.errorpage {
   display: flex;
   flex-direction: column;
   gap: var(--padding-L);
+}
+
+.main-body.errorpage {
+  padding: var(--padding-L) var(--padding-M);
+  align-items: center;
 }
 
 body {

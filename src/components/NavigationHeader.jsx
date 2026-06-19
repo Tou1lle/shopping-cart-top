@@ -7,11 +7,19 @@ function Navigation() {
       <Link to={"/"} className={`link ${styles["link-header-navigation"]}`}>
         Homepage
       </Link>
-      <Link to={"shop"} className={`link ${styles["link-header-navigation"]}`}>Shop</Link>
-      <Link to={"about-us"} className={`link ${styles["link-header-navigation"]}`}>
+      <Link to={"shop"} className={`link ${styles["link-header-navigation"]}`}>
+        Shop
+      </Link>
+      <Link
+        to={"about-us"}
+        className={`link ${styles["link-header-navigation"]}`}
+      >
         About Us
       </Link>
-      <Link to={"wish-list"} className={`link ${styles["link-header-navigation"]}`}>
+      <Link
+        to={"wish-list"}
+        className={`link ${styles["link-header-navigation"]}`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28px"
@@ -25,7 +33,10 @@ function Navigation() {
           />
         </svg>
       </Link>
-      <Link to={"shopping-cart"} className={`link ${styles["link-header-navigation"]}`}>
+      <Link
+        to={"shopping-cart"}
+        className={`link ${styles["link-header-navigation"]}`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28px"

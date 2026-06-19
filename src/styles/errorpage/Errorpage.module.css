@@ -1,0 +1,13 @@
+.error-heading,
+.error-paragraph {
+  color: var(--color-text-special);
+}
+
+.error-link {
+  color: var(--color-text-primary);
+}
+
+.error-link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
