@@ -4,6 +4,7 @@ import { Link } from "react-router";
 function ButtonToShop() {
   return (
     <Link
+      to={"shop"}
       className={`
       link
       ${styles["link-btn-shop"]}

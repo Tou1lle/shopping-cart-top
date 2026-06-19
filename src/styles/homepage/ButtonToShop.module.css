@@ -13,3 +13,7 @@
 .link-btn-shop:hover {
   box-shadow: inset 0px 0px 10px #000000;
 }
+
+.link-btn-shop:active {
+  opacity: 70%;
+}
