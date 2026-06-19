@@ -1,0 +1,14 @@
+.shop-intro {
+  max-width: 1300px;
+  width: 100%;
+}
+
+.shop-title {
+  color: var(--color-text-special);
+  font-size: var(--heading-L);
+}
+
+.shop-info-text {
+  color: var(--color-text-secondary);
+  font-size: var(--font-base);
+}

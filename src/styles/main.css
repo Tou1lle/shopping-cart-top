@@ -93,7 +93,8 @@ svg {
 }
 
 .main-body.homepage,
-.main-body.errorpage {
+.main-body.errorpage,
+.main-body.shoppage {
   display: flex;
   flex-direction: column;
   gap: var(--padding-L);
@@ -102,6 +103,12 @@ svg {
 .main-body.errorpage {
   padding: var(--padding-L) var(--padding-M);
   align-items: center;
+  justify-content: center;
+}
+
+.main-body.shoppage {
+  align-items: center;
+  padding: var(--padding-L) 0;
 }
 
 body {
