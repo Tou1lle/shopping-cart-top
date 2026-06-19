@@ -18,8 +18,8 @@ const router = createBrowserRouter([
       },
       {
         path: "shop",
-        element: <Shoppage />
-      }
+        element: <Shoppage />,
+      },
     ],
   },
 ]);
