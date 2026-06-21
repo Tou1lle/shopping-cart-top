@@ -1,12 +1,12 @@
-import ShopFilters from "./ShopFilters";
-import ShopItems from "./ShopItems";
+import ShopMain from "./ShopMain";
+import ShopPagination from "./ShopPagination";
 
 function ShopBody() {
   return (
-    <div>
-      <ShopFilters />
-      <ShopItems />
-    </div>
+    <main>
+      <ShopMain />
+      <ShopPagination />
+    </main>
   );
 }
 

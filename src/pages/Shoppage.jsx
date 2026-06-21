@@ -1,11 +1,11 @@
 import ShopTitle from "../components/shoppage/ShopTitle";
-import ShopBody from "../components/shoppage/ShopBody";
+import { Outlet } from "react-router";
 
 function Shoppage() {
   return (
     <div className="main-body shoppage">
       <ShopTitle />
-      <ShopBody />
+      <Outlet />
     </div>
   );
 }
