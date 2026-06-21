@@ -1,4 +1,7 @@
 .main-body-shop {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-L);
   max-width: var(--width-max-content);
   width: 100%;
 }
