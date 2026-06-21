@@ -1,8 +1,7 @@
-import { useNavigate, useParams } from "react-router";
+import { useNavigate } from "react-router";
 import styles from "./../../styles/shoppage/ShopPagination.module.css";
 
-function ShopPagination({ totalPages = 69 }) {
-  const { pageNumber } = useParams();
+function ShopPagination({ pageNumber = 1 ,totalPages = 69 }) {
   const currentPage = Number(pageNumber);
   const navigate = useNavigate();
 

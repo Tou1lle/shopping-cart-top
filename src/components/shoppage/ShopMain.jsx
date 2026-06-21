@@ -1,9 +1,7 @@
-import { useParams } from "react-router";
 import ShopFilters from "./ShopFilters";
 import ShopItems from "./ShopItems";
 
-function ShopMain() {
-  const { pageNumber } = useParams();
+function ShopMain({ pageNumber }) {
 
   return (
     <div>
