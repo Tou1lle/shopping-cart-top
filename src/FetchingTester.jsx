@@ -6,11 +6,7 @@ import {
 } from "./utils/dataFetcher";
 
 function FetchingTester() {
-
-  return (
-    <div>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default FetchingTester;

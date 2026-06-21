@@ -112,7 +112,6 @@ const useFilterData = (type) => {
   };
 };
 
-
 const getYourPrice = (card, marketType = "tcgplayer") => {
   if (!card[marketType]) {
     return "Price NOT Available:(";

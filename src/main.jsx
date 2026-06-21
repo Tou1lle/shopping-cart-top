@@ -24,11 +24,11 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Navigate to={"1"}/>
+            element: <Navigate to={"1"} />,
           },
           {
             path: ":pageNumber",
-            element: <ShopBody />
+            element: <ShopBody />,
           },
         ],
       },

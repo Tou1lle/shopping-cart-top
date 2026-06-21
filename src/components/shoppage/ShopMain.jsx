@@ -7,11 +7,13 @@ function ShopMain() {
 
   return (
     <div>
-      <p style={{color: "var(--color-text-special)"}}>This is ShopMain page number: {pageNumber}</p>
+      <p style={{ color: "var(--color-text-special)" }}>
+        This is ShopMain page number: {pageNumber}
+      </p>
       <ShopFilters />
       <ShopItems />
     </div>
-  )
+  );
 }
 
 export default ShopMain;
