@@ -1,0 +1,26 @@
+.sidebar {
+  max-width: 300px;
+}
+
+.filter-summary {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.clear-btn {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+.clear-btn,
+.summary-info {
+  color: var(--color-inactive-text);
+  font-size: var(--font-XS);
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+  color: var(--color-text-primary);
+}

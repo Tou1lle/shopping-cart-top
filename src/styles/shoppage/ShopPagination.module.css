@@ -16,7 +16,7 @@
   border: 1px solid var(--color-text-special);
   border-radius: 10px;
   color: var(--color-text-special);
-  font-weight: 650;
+  font-family: inherit;
 }
 
 .pagination-btn:hover {
