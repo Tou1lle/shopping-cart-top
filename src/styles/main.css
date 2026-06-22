@@ -32,6 +32,8 @@
   --disabled-btn: #4a4a4f;
   --inactive-btn: #606067;
   --active-btn: #8d8d96;
+  --active-btn-low-opacity: #8d8d9630;
+  --color-btn-special-low-opacity: #f7e95010;
   --element-border-base: #8d8d96;
   --element-border-active: #e8e8ed;
 
@@ -108,7 +110,7 @@ svg {
 
 .main-body.shoppage {
   align-items: center;
-  padding: var(--padding-L) 0;
+  padding: var(--padding-L) var(--padding-M);
 }
 
 body {

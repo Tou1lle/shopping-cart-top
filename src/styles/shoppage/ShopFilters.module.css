@@ -32,18 +32,36 @@
   gap: var(--padding-S);
 }
 
-.filter-btn {
+.filter-btn,
+.option {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: var(--padding-S);
   font-family: inherit;
   font-size: var(--font-base);
-  border: 1px solid var(--color-inactive-text);
   background-color: var(--header-bg);
-  border-radius: 10px;
   color: var(--color-text-primary);
   align-items: center;
+}
+
+.filter-btn {
+  border: 1px solid var(--color-inactive-text);
+  border-radius: 10px;
+}
+
+.option {
+  border: none;
+}
+
+.option:hover {
+  cursor: pointer;
+  background-color: var(--active-btn-low-opacity);
+}
+
+.active-drop {
+  background-color: var(--color-btn-special-low-opacity);
+  color: var(--color-text-special);
 }
 
 .filter-btn:hover {
@@ -66,4 +84,16 @@
 
 .relative {
   position: relative;
+}
+
+.options-container {
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid var(--inactive-btn);
+  border-radius: var(--border-radius-S);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
 }
