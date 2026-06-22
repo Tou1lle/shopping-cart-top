@@ -8,6 +8,7 @@ function FilterOptions({
   currentOption,
   baseOption,
   setOption,
+  onClick
 }) {
   return (
     <div>
@@ -17,7 +18,10 @@ function FilterOptions({
         <div>A network error has occured.</div>
       ) : (
         <div className={styles["options-container"]}>
-          <div className={styles.options}>
+          <div className={`
+            ${styles.options}
+            ${active ? styles["visible"] : ""}
+          `}>
             {[baseOption, ...data].map((option) => (
               <button
                 key={option}
@@ -25,7 +29,10 @@ function FilterOptions({
                   ${styles.option}
                   ${currentOption === option ? styles["active-drop"] : ""}  
                 `}
-                onClick={() => setOption(option)}
+                onClick={() => {
+                  setOption(option)
+                  onClick();
+                }}
               >
                 {option}
                 {currentOption === option && (

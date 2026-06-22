@@ -37,6 +37,7 @@ function FilterButton({ type, active, onClick }) {
         currentOption={option}
         baseOption={baseOption}
         setOption={(newOption) => setOption(newOption)}
+        onClick={onClick}
       />
     </div>
   );

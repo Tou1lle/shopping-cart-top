@@ -82,18 +82,24 @@
   transform: rotate(180deg);
 }
 
-.relative {
+
+.options-container {
   position: relative;
 }
 
-.options-container {
-  max-height: 300px;
-  overflow: auto;
-  border: 1px solid var(--inactive-btn);
-  border-radius: var(--border-radius-S);
-}
-
 .options {
+  background-color: var(--header-bg);
+  position: absolute;
   display: flex;
   flex-direction: column;
+  max-height: 0px;
+  width: 100%;
+  overflow: auto;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.options.visible {
+  max-height: 300px;
+  border: 1px solid var(--inactive-btn);
+  border-radius: var(--border-radius-S);
 }
