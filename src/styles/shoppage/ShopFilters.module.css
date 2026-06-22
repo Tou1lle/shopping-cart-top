@@ -43,9 +43,27 @@
   background-color: var(--header-bg);
   border-radius: 10px;
   color: var(--color-text-primary);
+  align-items: center;
 }
 
 .filter-btn:hover {
   cursor: pointer;
   border: 1px solid var(--active-btn);
+}
+
+.filter-btn svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+.active {
+  border: 1px solid var(--color-text-special);
+  color: var(--color-text-special);
+}
+
+.active svg {
+  transform: rotate(180deg);
+}
+
+.relative {
+  position: relative;
 }
