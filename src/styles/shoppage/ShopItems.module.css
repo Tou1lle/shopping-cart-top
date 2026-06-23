@@ -28,6 +28,59 @@
   animation: loading-dots 3s steps(1, end) infinite;
 }
 
+.card-link {
+  font-family: inherit;
+}
+
+.card-container {
+  background-color: var(--card-item-bg);
+  border-radius: 10px;
+}
+
+.card-img-container {
+  padding: 5px;
+}
+
+.card-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-main-info,
+.card-secondary-info {
+  padding: 5px 10px;
+}
+
+.card-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid var(--color-inactive-text);
+}
+
+.card-secondary-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-name,
+.card-price {
+  font-size: var(--font-base);
+  color: var(--color-text-primary);
+  font-weight: normal;
+}
+
+.card-supertype,
+.card-rarity {
+  font-size: var(--font-S);
+  color: var(--color-inactive-text);
+}
+
+.card-price {
+  color: var(--color-text-special);
+}
+
 @keyframes loading-dots {
   0% {
     content: "";
