@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router";
 import styles from "./../../styles/shoppage/ShopPagination.module.css";
+import { PAGE_SIZE } from "../../utils/constants";
 
-function ShopPagination({ pageNumber = 1, totalPages = 69 }) {
+function ShopPagination({ pageNumber = 1, totalCount, loading }) {
   const currentPage = Number(pageNumber);
   const navigate = useNavigate();
+  const totalPages = Math.ceil(totalCount / PAGE_SIZE);
 
   const handleClick = (newPage) => {
     navigate("/shop/" + newPage);
@@ -35,7 +37,7 @@ function ShopPagination({ pageNumber = 1, totalPages = 69 }) {
         Prev
       </button>
       <p>
-        {currentPage} of {totalPages}
+        {currentPage} of {loading ? "***" : totalPages}
       </p>
       <button
         className={styles["pagination-btn"]}

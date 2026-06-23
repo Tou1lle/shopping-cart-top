@@ -21,7 +21,11 @@ function ShopBody() {
         totalCount={totalCount}
         loading={loading}
       />
-      <ShopPagination pageNumber={currentPage} totalCount={totalCount} />
+      <ShopPagination 
+        pageNumber={currentPage}
+        totalCount={totalCount}
+        loading={loading}
+      />
     </main>
   );
 }
