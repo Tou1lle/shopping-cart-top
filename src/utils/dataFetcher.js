@@ -156,9 +156,9 @@ const useFilterData = (type) => {
   };
 };
 
-const getYourPrice = (card, marketType = "tcgplayer") => {
+const getCardPrice = (card, marketType = "tcgplayer") => {
   if (!card[marketType]) {
-    return "Price NOT Available:(";
+    return "N/A";
   }
 
   const prices =
@@ -180,5 +180,5 @@ export {
   useTotalCount,
   useTopCards,
   useFilterData,
-  getYourPrice,
+  getCardPrice,
 };
