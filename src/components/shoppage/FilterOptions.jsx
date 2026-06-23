@@ -8,20 +8,33 @@ function FilterOptions({
   currentOption,
   baseOption,
   setOption,
-  onClick
+  onClick,
 }) {
   return (
     <div>
       {loading ? (
-        <div></div>
+        <div className={styles["loading-container"]}>
+          <div
+            className={`
+            ${styles.loading}
+            ${active ? styles.visible : ""}  
+          `}
+          >
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+            <div className={styles.dot}></div>
+          </div>
+        </div>
       ) : error ? (
         <div>A network error has occured.</div>
       ) : (
         <div className={styles["options-container"]}>
-          <div className={`
+          <div
+            className={`
             ${styles.options}
-            ${active ? styles["visible"] : ""}
-          `}>
+            ${active ? styles.visible : ""}
+          `}
+          >
             {[baseOption, ...data].map((option) => (
               <button
                 key={option}
@@ -30,7 +43,7 @@ function FilterOptions({
                   ${currentOption === option ? styles["active-drop"] : ""}  
                 `}
                 onClick={() => {
-                  setOption(option)
+                  setOption(option);
                   onClick();
                 }}
               >
