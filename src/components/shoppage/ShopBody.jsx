@@ -2,12 +2,14 @@ import ShopMain from "./ShopMain";
 import ShopPagination from "./ShopPagination";
 import styles from "./../../styles/shoppage/ShopBody.module.css";
 import { useParams } from "react-router";
-import { usePagePokemonData } from "../../utils/dataFetcher";
+import { usePagePokemonData, useTotalCount } from "../../utils/dataFetcher";
 
 function ShopBody() {
   const { pageNumber } = useParams();
   const currentPage = Number(pageNumber) || 1;
-  const { data, totalCount, loading, error } = usePagePokemonData(currentPage);
+  const { data, loading, error, totalCountData } =
+    usePagePokemonData(currentPage);
+  const { totalCount, countLoading } = useTotalCount();
 
   if (error) {
     return <div>A network error was encountered</div>;
@@ -18,13 +20,13 @@ function ShopBody() {
       <ShopMain
         pageNumber={currentPage}
         pageCards={data}
-        totalCount={totalCount}
+        totalCount={totalCountData}
         loading={loading}
       />
-      <ShopPagination 
+      <ShopPagination
         pageNumber={currentPage}
         totalCount={totalCount}
-        loading={loading}
+        loading={countLoading}
       />
     </main>
   );

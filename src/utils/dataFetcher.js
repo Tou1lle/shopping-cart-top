@@ -4,7 +4,7 @@ import { sampleSize } from "lodash";
 
 const usePagePokemonData = (pageNumber = 1) => {
   const [data, setData] = useState(null);
-  const [totalCount, setTotalCount] = useState(0);
+  const [totalCountData, setTotalCount] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -13,11 +13,16 @@ const usePagePokemonData = (pageNumber = 1) => {
     const params = new URLSearchParams({ page: pageAPI });
     const sliceStart = ((pageNumber - 1) % 10) * PAGE_SIZE;
     const sliceEnd = sliceStart + PAGE_SIZE;
+    const controller = new AbortController();
+    const signal = controller.signal;
+    setLoading(true);
+    setError(null);
 
     fetch(BASE_API_CARDS + `?${params}`, {
       headers: {
         "X-API-Key": API_KEY,
       },
+      signal,
     })
       .then((response) => {
         if (response.status >= 400) {
@@ -29,17 +34,60 @@ const usePagePokemonData = (pageNumber = 1) => {
         const pageCards = data.data.slice(sliceStart, sliceEnd);
         setData(pageCards);
         setTotalCount(data.totalCount);
-        console.log(pageCards);
       })
-      .catch((error) => setError(error))
-      .finally(() => setLoading(false));
+      .catch((error) => {
+        if (error.name !== "AbortError") {
+          setError(error);
+        }
+      })
+      .finally(() => {
+        if (!signal.aborted) {
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      controller.abort();
+    };
   }, [pageNumber]);
 
   return {
     data,
     error,
     loading,
+    totalCountData,
+  };
+};
+
+const useTotalCount = () => {
+  const [totalCount, setTotalCount] = useState(0);
+  const [countError, setCountError] = useState(null);
+  const [countLoading, setCountLoading] = useState(true);
+
+  useEffect(() => {
+    setCountError(null);
+    setCountLoading(true);
+
+    fetch(BASE_API_CARDS, {
+      headers: {
+        "X-API-Key": API_KEY,
+      },
+    })
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("server error");
+        }
+        return response.json();
+      })
+      .then((data) => setTotalCount(data.totalCount))
+      .catch((error) => setCountError(error))
+      .finally(() => setCountLoading(false));
+  }, []);
+
+  return {
     totalCount,
+    countError,
+    countLoading,
   };
 };
 
@@ -64,7 +112,6 @@ const useTopCards = (limit = 3) => {
         const cards = data.data;
         const topCards = sampleSize(cards, limit);
         setData(topCards);
-        console.log(topCards);
       })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
@@ -96,7 +143,6 @@ const useFilterData = (type) => {
       })
       .then((data) => {
         const filters = data.data;
-        console.log(filters);
         setData(filters);
       })
       .catch((error) => setError(error))
@@ -129,4 +175,10 @@ const getYourPrice = (card, marketType = "tcgplayer") => {
   return yourPrice;
 };
 
-export { usePagePokemonData, useTopCards, useFilterData, getYourPrice };
+export {
+  usePagePokemonData,
+  useTotalCount,
+  useTopCards,
+  useFilterData,
+  getYourPrice,
+};
