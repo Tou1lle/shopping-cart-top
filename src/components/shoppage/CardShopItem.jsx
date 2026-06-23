@@ -17,7 +17,7 @@ function CardShopItem({ card }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default CardShopItem;

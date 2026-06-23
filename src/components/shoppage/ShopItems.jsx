@@ -1,14 +1,19 @@
+import styles from "./../../styles/shoppage/ShopItems.module.css";
 import CardShopItem from "./CardShopItem";
 
 function ShopItems({ pageCards, loading }) {
   if (loading) {
-    return <div>Catching & Fetching</div>;
+    return (
+      <div className={styles["loading-container"]}>
+        <p className={styles["loading-text"]}>Catching & Fetching</p>
+      </div>
+    );
   }
 
   return (
-    <div>
+    <div className={styles["cards-container"]}>
       {pageCards.map((card) => {
-        return <CardShopItem card={card} />
+        return <CardShopItem card={card} />;
       })}
     </div>
   );

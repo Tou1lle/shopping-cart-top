@@ -1,5 +1,6 @@
 .sidebar {
   max-width: 300px;
+  flex: 1;
 }
 
 .filter-summary {

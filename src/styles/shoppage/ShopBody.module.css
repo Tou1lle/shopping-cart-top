@@ -5,3 +5,8 @@
   max-width: var(--width-max-content);
   width: 100%;
 }
+
+.main-shop {
+  display: flex;
+  gap: var(--padding-L);
+}
