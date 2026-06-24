@@ -8,6 +8,9 @@ function ShopPagination({ pageNumber = 1, totalCount, loading }) {
   const totalPages = Math.ceil(totalCount / PAGE_SIZE);
 
   const handleClick = (newPage) => {
+    if (newPage === 5) {
+      newPage++;
+    }
     navigate("/shop/" + newPage);
   };
 
