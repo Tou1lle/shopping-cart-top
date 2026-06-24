@@ -8,9 +8,6 @@ function ShopPagination({ pageNumber = 1, totalCount, loading }) {
   const totalPages = Math.ceil(totalCount / PAGE_SIZE);
 
   const handleClick = (newPage) => {
-    if (newPage === 5) {
-      newPage++;
-    }
     navigate("/shop/" + newPage);
   };
 
@@ -18,7 +15,13 @@ function ShopPagination({ pageNumber = 1, totalCount, loading }) {
     <div className={styles["pagination-container"]}>
       <button
         className={styles["pagination-btn"]}
-        onClick={() => handleClick(currentPage - 1)}
+        onClick={() => {
+          if (currentPage === 6) {
+            handleClick(currentPage - 2);
+            return;
+          }
+          handleClick(currentPage - 1);
+        }}
         disabled={currentPage === 1}
       >
         <svg
@@ -44,7 +47,13 @@ function ShopPagination({ pageNumber = 1, totalCount, loading }) {
       </p>
       <button
         className={styles["pagination-btn"]}
-        onClick={() => handleClick(currentPage + 1)}
+        onClick={() => {
+          if (currentPage === 4) {
+            handleClick(currentPage + 2);
+            return;
+          }
+          handleClick(currentPage + 1);
+        }}
         disabled={currentPage === Number(totalPages)}
       >
         Next
