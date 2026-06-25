@@ -2,7 +2,7 @@ import { getCardPrice } from "../../utils/dataFetcher";
 import { Link } from "react-router";
 import styles from "./../../styles/shoppage/ShopItems.module.css";
 
-function CardShopItem({ card }) {
+function CardShopItem({ card, market }) {
   return (
     <Link className={`link ${styles["card-link"]}`}>
       <div className={styles["card-container"]}>
@@ -16,7 +16,7 @@ function CardShopItem({ card }) {
           </div>
           <div className={styles["card-secondary-info"]}>
             <p className={styles["card-rarity"]}>{card.rarity}</p>
-            <p className={styles["card-price"]}>{getCardPrice(card)}</p>
+            <p className={styles["card-price"]}>{(market === "tcgplayer" ? "$" : "€") + getCardPrice(card, market)}</p>
           </div>
         </div>
       </div>
