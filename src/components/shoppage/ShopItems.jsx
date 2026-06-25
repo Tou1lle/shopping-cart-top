@@ -13,7 +13,7 @@ function ShopItems({ pageCards, loading, market }) {
   return (
     <div className={styles["cards-container"]}>
       {pageCards.map((card) => {
-        return <CardShopItem key={card.id} card={card} market={market}/>;
+        return <CardShopItem key={card.id} card={card} market={market} />;
       })}
     </div>
   );

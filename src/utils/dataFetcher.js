@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { BASE_API_CARDS, BASE_API, API_KEY, PAGE_SIZE, MARKET_TYPES } from "./constants";
+import {
+  BASE_API_CARDS,
+  BASE_API,
+  API_KEY,
+  PAGE_SIZE,
+  MARKET_TYPES,
+} from "./constants";
 import { sampleSize } from "lodash";
 
 const usePagePokemonData = (pageNumber = 1) => {

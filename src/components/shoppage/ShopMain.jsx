@@ -9,12 +9,16 @@ function ShopMain({ pageCards, totalCount, loading }) {
 
   const changeMarket = () => {
     setMarket(market === MARKET_TYPES[0] ? MARKET_TYPES[1] : MARKET_TYPES[0]);
-  }
+  };
 
   return (
     <div className={styles["main-shop"]}>
-      <ShopFilters totalCount={totalCount} market={market} changeMarket={changeMarket}/>
-      <ShopItems pageCards={pageCards} loading={loading} market={market}/>
+      <ShopFilters
+        totalCount={totalCount}
+        market={market}
+        changeMarket={changeMarket}
+      />
+      <ShopItems pageCards={pageCards} loading={loading} market={market} />
     </div>
   );
 }
