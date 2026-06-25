@@ -5,7 +5,7 @@ import styles from "./../../styles/shoppage/ShopItems.module.css";
 
 function CardShopItem({ card, market }) {
   return (
-    <Link className={`link ${styles["card-link"]}`}>
+    <Link to={"/item/" + card.id} className={`link ${styles["card-link"]}`}>
       <div className={styles["card-container"]}>
         <div className={styles["card-img-container"]}>
           <img src={card.images.small} alt="Pokémon card" />
