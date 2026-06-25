@@ -1,5 +1,6 @@
 import { getCardPrice } from "../../utils/dataFetcher";
 import { Link } from "react-router";
+import { MARKET_TYPES } from "../../utils/constants";
 import styles from "./../../styles/shoppage/ShopItems.module.css";
 
 function CardShopItem({ card, market }) {
@@ -16,7 +17,7 @@ function CardShopItem({ card, market }) {
           </div>
           <div className={styles["card-secondary-info"]}>
             <p className={styles["card-rarity"]}>{card.rarity}</p>
-            <p className={styles["card-price"]}>{(market === "tcgplayer" ? "$" : "€") + getCardPrice(card, market)}</p>
+            <p className={styles["card-price"]}>{(market === MARKET_TYPES[0] ? "$" : "€") + getCardPrice(card, market)}</p>
           </div>
         </div>
       </div>

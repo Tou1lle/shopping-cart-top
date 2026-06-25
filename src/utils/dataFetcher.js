@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BASE_API_CARDS, BASE_API, API_KEY, PAGE_SIZE } from "./constants";
+import { BASE_API_CARDS, BASE_API, API_KEY, PAGE_SIZE, MARKET_TYPES } from "./constants";
 import { sampleSize } from "lodash";
 
 const usePagePokemonData = (pageNumber = 1) => {
@@ -156,7 +156,7 @@ const useFilterData = (type) => {
   };
 };
 
-const getCardPrice = (card, marketType = "tcgplayer") => {
+const getCardPrice = (card, marketType = MARKET_TYPES[0]) => {
   if (!card[marketType]) {
     return "N/A";
   }
