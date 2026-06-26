@@ -50,8 +50,29 @@ function ItemPage() {
         </p>
       </div>
       <div>
-        <div>{data.id}</div>
-        <div>{data.name}</div>
+        <div className={styles["left-side"]}>
+          <div className={styles["image-container"]}>
+            <img src={data.images.large} alt="" />
+          </div>
+          <div className={styles["left-side-content"]}>
+            <div>
+              <h2 className={styles["left-header"]}>
+                <span>{data.name}</span> <span>{data.id}</span>
+              </h2>
+              <div className={styles["left-detail"]}>
+                <span>Rarity</span> <span>{data.rarity}</span>
+              </div>
+              <div className={styles["left-detail"]}>
+                <span>HP</span> <span>{data.hp}</span>
+              </div>
+              <div className={styles["left-detail"]}>
+                <span>Artist</span> <span>{data.artist}</span>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div></div>
       </div>
     </div>
   );
