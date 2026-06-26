@@ -1,0 +1,4 @@
+.loading-page,
+.error-page {
+  flex: 1;
+}

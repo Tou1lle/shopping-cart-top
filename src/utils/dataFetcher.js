@@ -162,6 +162,39 @@ const useFilterData = (type) => {
   };
 };
 
+const useItemPokemonData = (pokemonID) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+
+  useState(() => {
+    setError(null);
+    setLoading(true);
+
+    fetch(BASE_API_CARDS + "/" + pokemonID, {
+      headers: {
+        "X-API-Key": API_KEY,
+      },
+    })
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("server error") 
+        }
+        return response.json();
+      })
+      .then((data) => setData(data.data))
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, [pokemonID]);
+
+  return {
+    data,
+    loading,
+    error
+  }
+}
+
 const getCardPrice = (card, marketType = MARKET_TYPES[0]) => {
   if (!card[marketType]) {
     return "N/A";
@@ -186,5 +219,6 @@ export {
   useTotalCount,
   useTopCards,
   useFilterData,
+  useItemPokemonData,
   getCardPrice,
 };

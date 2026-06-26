@@ -1,11 +1,13 @@
 import { getCardPrice } from "../../utils/dataFetcher";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { MARKET_TYPES } from "../../utils/constants";
 import styles from "./../../styles/shoppage/ShopItems.module.css";
 
 function CardShopItem({ card, market }) {
+  const location = useLocation();
+
   return (
-    <Link to={"/item/" + card.id} className={`link ${styles["card-link"]}`}>
+    <Link to={"/item/" + card.id} state={{from: location.pathname}} className={`link ${styles["card-link"]}`}>
       <div className={styles["card-container"]}>
         <div className={styles["card-img-container"]}>
           <img src={card.images.small} alt="Pokémon card" />
