@@ -167,7 +167,6 @@ const useItemPokemonData = (pokemonID) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-
   useState(() => {
     setError(null);
     setLoading(true);
@@ -179,7 +178,7 @@ const useItemPokemonData = (pokemonID) => {
     })
       .then((response) => {
         if (response.status >= 400) {
-          throw new Error("server error") 
+          throw new Error("server error");
         }
         return response.json();
       })
@@ -191,9 +190,9 @@ const useItemPokemonData = (pokemonID) => {
   return {
     data,
     loading,
-    error
-  }
-}
+    error,
+  };
+};
 
 const getCardPrice = (card, marketType = MARKET_TYPES[0]) => {
   if (!card[marketType]) {

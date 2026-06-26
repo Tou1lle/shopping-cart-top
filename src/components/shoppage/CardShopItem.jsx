@@ -7,7 +7,11 @@ function CardShopItem({ card, market }) {
   const location = useLocation();
 
   return (
-    <Link to={"/item/" + card.id} state={{from: location.pathname}} className={`link ${styles["card-link"]}`}>
+    <Link
+      to={"/item/" + card.id}
+      state={{ from: location.pathname }}
+      className={`link ${styles["card-link"]}`}
+    >
       <div className={styles["card-container"]}>
         <div className={styles["card-img-container"]}>
           <img src={card.images.small} alt="Pokémon card" />

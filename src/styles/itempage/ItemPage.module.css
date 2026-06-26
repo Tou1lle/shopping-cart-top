@@ -1,4 +1,29 @@
+.item-page,
 .loading-page,
 .error-page {
   flex: 1;
+  max-width: var(--width-max-content);
+  width: 100%;
+  margin: auto;
+  padding: var(--padding-M) 0 var(--padding-L) 0;
+}
+
+.top-navigation {
+  width: 100%;
+  display: flex;
+  gap: var(--padding-S);
+  align-items: center;
+}
+
+.nav-split,
+.nav-pokemon {
+  color: var(--color-text-primary);
+}
+
+.nav-back {
+  color: var(--color-text-secondary);
+}
+
+.nav-back:hover {
+  color: var(--color-text-special);
 }
