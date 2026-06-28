@@ -135,3 +135,50 @@ h3 {
   flex: 1;
   gap: var(--padding-L);
 }
+
+.right-side {
+  flex: 1;
+}
+
+.right-basic-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-M);
+}
+
+.right-header {
+  display: flex;
+}
+
+.right-h1-name {
+  font-size: var(--heading-XL);
+  color: var(--color-text-special);
+}
+
+.right-h1-id {
+  font-size: var(--font-base);
+  color: var(--color-text-secondary);
+}
+
+.right-info-detail {
+  border-bottom: 1px solid var(--active-btn);
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--heading-S);
+  padding-bottom: 5px;
+}
+
+.right-info-detail p:nth-child(1) {
+  color: var(--color-text-secondary);
+}
+
+section.right-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-L);
+}
+
+.pokemon-flavor-text {
+  font-size: var(--heading-M);
+  color: var(--color-text-special);
+}

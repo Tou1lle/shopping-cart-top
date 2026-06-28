@@ -104,15 +104,15 @@ function ItemPage() {
         <div className={styles["right-side"]}>
           <div className={styles["right-basic-info"]}>
             <h1 className={styles["right-header"]}>
-              <span className={styles["right-h1"]}>{data.name}</span>&nbsp;
+              <span className={styles["right-h1-name"]}>{data.name}</span>&nbsp;
               <span className={styles["right-h1-id"]}>#{data.id}</span>
             </h1>
-            <section>
-              <div>
+            <section className={styles["right-info-container"]}>
+              <div className={styles["right-info-detail"]}>
                 <p>Supertype</p>
                 <p>{data.supertype}</p>
               </div>
-              <div>
+              <div className={styles["right-info-detail"]}>
                 <p>Subtype</p>
                 <p>
                   {data.subtypes.map((subtype, index) => {
@@ -122,7 +122,7 @@ function ItemPage() {
                   })}
                 </p>
               </div>
-              <div>
+              <div className={styles["right-info-detail"]}>
                 <p>Type</p>
                 <p>
                   {data.types.map((type, index) => {
@@ -133,8 +133,8 @@ function ItemPage() {
                 </p>
               </div>
             </section>
-            <div>
-              <p>{data.flavorText}</p>
+            <div className={styles["pokemon-flavor-text"]}>
+              <p>"{data.flavorText}"</p>
             </div>
           </div>
           <div className={styles["right-market-prices"]}></div>
