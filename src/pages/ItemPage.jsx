@@ -2,6 +2,13 @@ import { useLocation, useParams, Link } from "react-router";
 import { useItemPokemonData } from "../utils/dataFetcher";
 import { MARKET_TYPES, MARKET_URLS } from "../utils/constants";
 import styles from "./../styles/itempage/ItemPage.module.css";
+import tcgplayerLogo from "./../assets/images/tcgplayer-logo.png";
+import cardmarketLogo from "./../assets/images/cardmarket-logo.png";
+
+const logoURLs = {
+  [MARKET_TYPES[0]]: tcgplayerLogo,
+  [MARKET_TYPES[1]]: cardmarketLogo,
+};
 
 function ItemPage() {
   const { itemID } = useParams();
@@ -137,7 +144,28 @@ function ItemPage() {
               <p>"{data.flavorText}"</p>
             </div>
           </div>
-          <div className={styles["right-market-prices"]}></div>
+          <div className={styles["right-market-prices"]}>
+            <h2 className={styles["right-market-header"]}>Market Prices</h2>
+            <div className={styles["right-market-btns-container"]}>
+              {MARKET_TYPES.map((marketType) => {
+                return (
+                  <div className={`${styles["right-market-btn"]}`}>
+                    <p>
+                      <span className={styles["right-market-type"]}>
+                        {marketType === MARKET_TYPES[0]
+                          ? marketType.slice(0, 4).toUpperCase() + marketType.slice(4)
+                          : marketType.charAt(0).toUpperCase() + marketType.slice(1)}
+                      </span>
+                      <span className={styles["right-market-type-price"]}>
+                        {marketType === MARKET_TYPES[0] ? "$USD" : "€EUR"}
+                      </span>
+                    </p>
+                    <img src={logoURLs[marketType]} alt="Market logo" />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
           <div className={styles["right-btns-container"]}></div>
         </div>
       </div>

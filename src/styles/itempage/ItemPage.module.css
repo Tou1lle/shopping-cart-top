@@ -138,6 +138,9 @@ h3 {
 
 .right-side {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-XL);
 }
 
 .right-basic-info {
@@ -181,4 +184,49 @@ section.right-info-container {
 .pokemon-flavor-text {
   font-size: var(--heading-M);
   color: var(--color-text-special);
+}
+
+.right-market-prices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-S);
+}
+
+.right-market-header {
+  color: var(--color-text-primary);
+  font-size: var(--heading-L);
+}
+
+.right-market-btns-container {
+  display: flex;
+  gap: var(--padding-M);
+}
+
+.right-market-btn {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  border: 1px solid var(--element-border-base);
+  border-radius: var(--border-radius-M);
+  background-color: var(--disabled-btn);
+  padding: var(--padding-S);
+  color: var(--color-text-secondary);
+}
+
+.right-market-btn p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right-market-btn img {
+  max-width: 150px;
+}
+
+.right-market-type {
+  font-size: var(--font-base);
+}
+
+.right-market-type-price {
+  font-size: var(--font-secondary-base);
 }
