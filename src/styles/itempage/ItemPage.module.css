@@ -175,6 +175,10 @@ h3 {
   color: var(--color-text-secondary);
 }
 
+.right-info-detail p:nth-child(2) {
+  color: var(--color-text-primary);
+}
+
 section.right-info-container {
   display: flex;
   flex-direction: column;
@@ -203,6 +207,7 @@ section.right-info-container {
 }
 
 .right-market-btn {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex: 1;
@@ -211,6 +216,28 @@ section.right-info-container {
   background-color: var(--disabled-btn);
   padding: var(--padding-S);
   color: var(--color-text-secondary);
+  overflow: hidden;
+}
+
+.right-market-btn.active-market {
+  border: 1px solid var(--color-text-special);
+  color: var(--color-text-special);
+}
+
+.right-market-btn.right-market-btn.active-market::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text-special);
+  opacity: 10%;
+}
+
+.right-market-btn:hover {
+  cursor: pointer;
+  border: 1px solid var(--color-text-primary);
 }
 
 .right-market-btn p {

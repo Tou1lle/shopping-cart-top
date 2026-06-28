@@ -4,6 +4,7 @@ import { MARKET_TYPES, MARKET_URLS } from "../utils/constants";
 import styles from "./../styles/itempage/ItemPage.module.css";
 import tcgplayerLogo from "./../assets/images/tcgplayer-logo.png";
 import cardmarketLogo from "./../assets/images/cardmarket-logo.png";
+import { useState } from "react";
 
 const logoURLs = {
   [MARKET_TYPES[0]]: tcgplayerLogo,
@@ -13,6 +14,7 @@ const logoURLs = {
 function ItemPage() {
   const { itemID } = useParams();
   const { data, loading, error } = useItemPokemonData(itemID);
+  const [market, setMarket] = useState(MARKET_TYPES[0]);
   const location = useLocation();
   const backTo = location.state?.from ?? "/shop";
   const pageNumber = backTo.split("/").at(-1);
@@ -81,6 +83,7 @@ function ItemPage() {
               {MARKET_TYPES.map((marketType) => {
                 return (
                   <a
+                    key={marketType}
                     href={
                       data[marketType]
                         ? data[marketType].url
@@ -149,12 +152,23 @@ function ItemPage() {
             <div className={styles["right-market-btns-container"]}>
               {MARKET_TYPES.map((marketType) => {
                 return (
-                  <div className={`${styles["right-market-btn"]}`}>
+                  <div
+                    key={marketType}
+                    className={`
+                  ${styles["right-market-btn"]}
+                  ${market === marketType ? styles["active-market"] : ""}
+                  `}
+                    onClick={() => {
+                      setMarket(marketType);
+                    }}
+                  >
                     <p>
                       <span className={styles["right-market-type"]}>
                         {marketType === MARKET_TYPES[0]
-                          ? marketType.slice(0, 4).toUpperCase() + marketType.slice(4)
-                          : marketType.charAt(0).toUpperCase() + marketType.slice(1)}
+                          ? marketType.slice(0, 4).toUpperCase() +
+                            marketType.slice(4)
+                          : marketType.charAt(0).toUpperCase() +
+                            marketType.slice(1)}
                       </span>
                       <span className={styles["right-market-type-price"]}>
                         {marketType === MARKET_TYPES[0] ? "$USD" : "€EUR"}
