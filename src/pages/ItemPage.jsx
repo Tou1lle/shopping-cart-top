@@ -50,7 +50,7 @@ function ItemPage() {
           <span>&nbsp;#{data.id}</span>
         </p>
       </div>
-      <div>
+      <div className={styles["main-content"]}>
         <div className={styles["left-side"]}>
           <div className={styles["image-container"]}>
             <img src={data.images.large} alt="" />
@@ -101,7 +101,45 @@ function ItemPage() {
             </div>
           </div>
         </div>
-        <div></div>
+        <div className={styles["right-side"]}>
+          <div className={styles["right-basic-info"]}>
+            <h1 className={styles["right-header"]}>
+              <span className={styles["right-h1"]}>{data.name}</span>&nbsp;
+              <span className={styles["right-h1-id"]}>#{data.id}</span>
+            </h1>
+            <section>
+              <div>
+                <p>Supertype</p>
+                <p>{data.supertype}</p>
+              </div>
+              <div>
+                <p>Subtype</p>
+                <p>
+                  {data.subtypes.map((subtype, index) => {
+                    return index === data.subtypes.length - 1
+                      ? `${subtype}`
+                      : `${subtype}, `;
+                  })}
+                </p>
+              </div>
+              <div>
+                <p>Type</p>
+                <p>
+                  {data.types.map((type, index) => {
+                    return index === data.types.length - 1
+                      ? `${type}`
+                      : `${type}, `;
+                  })}
+                </p>
+              </div>
+            </section>
+            <div>
+              <p>{data.flavorText}</p>
+            </div>
+          </div>
+          <div className={styles["right-market-prices"]}></div>
+          <div className={styles["right-btns-container"]}></div>
+        </div>
       </div>
     </div>
   );

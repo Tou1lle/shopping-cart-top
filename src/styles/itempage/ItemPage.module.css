@@ -129,3 +129,9 @@ h3 {
 .external-market-btn:hover {
   color: var(--color-text-special);
 }
+
+.main-content {
+  display: flex;
+  flex: 1;
+  gap: var(--padding-L);
+}
