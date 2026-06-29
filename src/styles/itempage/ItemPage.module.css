@@ -193,7 +193,7 @@ section.right-info-container {
 .right-market-prices {
   display: flex;
   flex-direction: column;
-  gap: var(--padding-S);
+  gap: var(--padding-M);
 }
 
 .right-market-header {
@@ -256,4 +256,33 @@ section.right-info-container {
 
 .right-market-type-price {
   font-size: var(--font-secondary-base);
+}
+
+.lmh-prices-container {
+  border: 1px solid var(--element-border-base);
+  background-color: var(--card-item-bg);
+}
+
+.lmh-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-secondary-base);
+  padding: 15px;
+}
+
+.lmh-price {
+  border-bottom: 1px solid var(--element-border-base);
+}
+
+.lmh-price:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.lmh-price span:nth-child(1) {
+  color: var(--color-text-secondary);
+}
+
+.lmh-price span:nth-child(2) {
+  color: var(--color-text-primary);
 }

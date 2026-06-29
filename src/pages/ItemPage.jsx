@@ -180,16 +180,16 @@ function ItemPage() {
                 );
               })}
             </div>
-            <section>
-              <div>
+            <section className={styles["lmh-prices-container"]}>
+              <div className={styles["lmh-price"]}>
                 <span>Low</span>
                 <span>{prices ? prices.low : "N/A"}</span>
               </div>
-              <div>
+              <div className={styles["lmh-price"]}>
                 <span>Mid</span>
                 <span>{prices ? prices.mid : "N/A"}</span>
               </div>
-              <div>
+              <div className={styles["lmh-price"]}>
                 <span>High</span>
                 <span>{prices ? prices.high : "N/A"}</span>
               </div>
