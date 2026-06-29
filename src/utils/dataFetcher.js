@@ -228,17 +228,17 @@ const getLMHPrices = (card, marketType = MARKET_TYPES[0]) => {
       low: prices.low,
       mid: prices.mid,
       high: prices.high,
-    }
+    };
   } else if (marketType.includes("card")) {
     return {
       low: prices.lowPrice,
       mid: prices.averageSellPrice,
       high: prices.trendPrice,
-    }
+    };
   } else {
     return false;
   }
-}
+};
 
 export {
   usePagePokemonData,
@@ -247,5 +247,5 @@ export {
   useFilterData,
   useItemPokemonData,
   getCardPrice,
-  getLMHPrices
+  getLMHPrices,
 };

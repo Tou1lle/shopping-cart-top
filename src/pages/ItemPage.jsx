@@ -1,5 +1,9 @@
 import { useLocation, useParams, Link } from "react-router";
-import { useItemPokemonData, getLMHPrices } from "../utils/dataFetcher";
+import {
+  useItemPokemonData,
+  getLMHPrices,
+  getCardPrice,
+} from "../utils/dataFetcher";
 import { MARKET_TYPES, MARKET_URLS } from "../utils/constants";
 import styles from "./../styles/itempage/ItemPage.module.css";
 import tcgplayerLogo from "./../assets/images/tcgplayer-logo.png";
@@ -183,17 +187,35 @@ function ItemPage() {
             <section className={styles["lmh-prices-container"]}>
               <div className={styles["lmh-price"]}>
                 <span>Low</span>
-                <span>{prices ? prices.low : "N/A"}</span>
+                <span>
+                  {prices ? prices.low : "N/A"}&nbsp;
+                  {market === MARKET_TYPES[0] ? "$" : "€"}
+                </span>
               </div>
               <div className={styles["lmh-price"]}>
                 <span>Mid</span>
-                <span>{prices ? prices.mid : "N/A"}</span>
+                <span>
+                  {prices ? prices.mid : "N/A"}&nbsp;
+                  {market === MARKET_TYPES[0] ? "$" : "€"}
+                </span>
               </div>
               <div className={styles["lmh-price"]}>
                 <span>High</span>
-                <span>{prices ? prices.high : "N/A"}</span>
+                <span>
+                  {prices ? prices.high : "N/A"}&nbsp;
+                  {market === MARKET_TYPES[0] ? "$" : "€"}
+                </span>
               </div>
             </section>
+            <div className={styles["card-final-price"]}>
+              <p>
+                <span>YOUR PRICE:</span>&nbsp;
+                <span>
+                  {getCardPrice(data, market)}&nbsp;
+                  {market === MARKET_TYPES[0] ? "$" : "€"}
+                </span>
+              </p>
+            </div>
           </div>
           <div className={styles["right-btns-container"]}></div>
         </div>

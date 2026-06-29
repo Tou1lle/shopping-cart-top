@@ -286,3 +286,24 @@ section.right-info-container {
 .lmh-price span:nth-child(2) {
   color: var(--color-text-primary);
 }
+
+.card-final-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-final-price p {
+  display: flex;
+  gap: var(--padding-S);
+  align-items: baseline;
+}
+
+.card-final-price span:nth-child(1) {
+  font-size: var(--font-base);
+  color: var(--color-text-secondary);
+}
+
+.card-final-price span:nth-last-child(1) {
+  font-size: var(--heading-XL);
+  color: var(--color-text-special);
+}
