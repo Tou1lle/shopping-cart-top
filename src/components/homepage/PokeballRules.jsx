@@ -1,6 +1,8 @@
 import styles from "./../../styles/homepage/PokeballRules.module.css";
 import pokeballTop from "./../../assets/images/pokeball-top-half.png";
 import pokeballBot from "./../../assets/images/pokeball-bottom-half.png";
+import pikachuURL from "./../../assets/images/pikachu-walks-animated.gif";
+import butterfreeURL from "./../../assets/images/butterfree-animated.gif";
 
 function PokeballRules() {
   const handleClick = () => {
@@ -74,6 +76,20 @@ function PokeballRules() {
             </p>
           </div>
         </section>
+        <div className={styles["pr-pokemon"]}>
+          <img src={pikachuURL} alt="Pokemon animated gif" />
+        </div>
+        <div className={styles["pr-pokemon"]}>
+          <img src={butterfreeURL} alt="Pokemon animated gif" />
+        </div>
+        <div className={styles["pr-pokemons-small-device"]}>
+          <div className={styles["pr-pokemon-alternate"]}>
+            <img src={pikachuURL} alt="Pokemon animated gif" />
+          </div>
+          <div className={styles["pr-pokemon-alternate"]}>
+            <img src={butterfreeURL} alt="Pokemon animated gif" />
+          </div>
+        </div>
       </div>
       <div className={styles["pokeball-img-container"]}>
         <img
