@@ -1,5 +1,5 @@
 import { useLocation, useParams, Link } from "react-router";
-import { useItemPokemonData } from "../utils/dataFetcher";
+import { useItemPokemonData, getLMHPrices } from "../utils/dataFetcher";
 import { MARKET_TYPES, MARKET_URLS } from "../utils/constants";
 import styles from "./../styles/itempage/ItemPage.module.css";
 import tcgplayerLogo from "./../assets/images/tcgplayer-logo.png";
@@ -18,6 +18,7 @@ function ItemPage() {
   const location = useLocation();
   const backTo = location.state?.from ?? "/shop";
   const pageNumber = backTo.split("/").at(-1);
+  const prices = data ? getLMHPrices(data, market) : null;
 
   if (loading) {
     return <div className={styles["loading-page"]}>Loading</div>;
@@ -179,6 +180,20 @@ function ItemPage() {
                 );
               })}
             </div>
+            <section>
+              <div>
+                <span>Low</span>
+                <span>{prices ? prices.low : "N/A"}</span>
+              </div>
+              <div>
+                <span>Mid</span>
+                <span>{prices ? prices.mid : "N/A"}</span>
+              </div>
+              <div>
+                <span>High</span>
+                <span>{prices ? prices.high : "N/A"}</span>
+              </div>
+            </section>
           </div>
           <div className={styles["right-btns-container"]}></div>
         </div>

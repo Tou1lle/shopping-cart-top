@@ -213,6 +213,33 @@ const getCardPrice = (card, marketType = MARKET_TYPES[0]) => {
   return yourPrice;
 };
 
+const getLMHPrices = (card, marketType = MARKET_TYPES[0]) => {
+  if (!card[marketType]) {
+    return false;
+  }
+
+  const prices =
+    marketType.includes("tcg") === true
+      ? card[marketType].prices[Object.keys(card[marketType].prices)[0]]
+      : card[marketType].prices;
+
+  if (marketType.includes("tcg")) {
+    return {
+      low: prices.low,
+      mid: prices.mid,
+      high: prices.high,
+    }
+  } else if (marketType.includes("card")) {
+    return {
+      low: prices.lowPrice,
+      mid: prices.averageSellPrice,
+      high: prices.trendPrice,
+    }
+  } else {
+    return false;
+  }
+}
+
 export {
   usePagePokemonData,
   useTotalCount,
@@ -220,4 +247,5 @@ export {
   useFilterData,
   useItemPokemonData,
   getCardPrice,
+  getLMHPrices
 };
