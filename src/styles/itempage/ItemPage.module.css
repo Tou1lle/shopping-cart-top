@@ -307,3 +307,45 @@ section.right-info-container {
   font-size: var(--heading-XL);
   color: var(--color-text-special);
 }
+
+.right-btns-container {
+  display: flex;
+  gap: var(--padding-M);
+}
+
+.right-btns-container button {
+  font-family: inherit;
+  text-transform: uppercase;
+  flex: 1;
+  font-size: var(--heading-L);
+  padding: var(--padding-M) var(--padding-XL);
+  border-radius: var(--border-radius-L);
+}
+
+.right-btns-container button:hover {
+  cursor: pointer;
+}
+
+.right-btns-container button:active {
+  opacity: 70%;
+}
+
+.btn-wishlist {
+  border: 2px solid var(--color-text-special);
+  background-color: transparent;
+  color: var(--color-text-special);
+}
+
+.btn-wishlist:hover {
+  border: 2px solid var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.btn-cart {
+  background-color: var(--color-text-special);
+  border: none;
+}
+
+.btn-cart:hover {
+  box-shadow: inset 0px 0px 10px #000000;
+}

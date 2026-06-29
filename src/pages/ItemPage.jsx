@@ -217,7 +217,10 @@ function ItemPage() {
               </p>
             </div>
           </div>
-          <div className={styles["right-btns-container"]}></div>
+          <div className={styles["right-btns-container"]}>
+            <button className={`${styles["btn-wishlist"]}`}>Add to wishlist</button>
+            <button className={`${styles["btn-cart"]}`}>Add to cart</button>
+          </div>
         </div>
       </div>
     </div>
