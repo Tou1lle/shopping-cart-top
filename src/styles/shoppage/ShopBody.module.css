@@ -10,3 +10,9 @@
   display: flex;
   gap: var(--padding-L);
 }
+
+@media (max-width: 768px) {
+  .main-shop {
+    flex-direction: column;
+  }
+}

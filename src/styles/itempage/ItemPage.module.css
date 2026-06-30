@@ -349,3 +349,40 @@ section.right-info-container {
 .btn-cart:hover {
   box-shadow: inset 0px 0px 10px #000000;
 }
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 0 var(--padding-S);
+  }
+
+  .left-side {
+    align-items: center;
+  }
+
+  .left-side-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .right-btns-container {
+    flex-direction: column;
+  }
+
+  .right-btns-container button {
+    font-size: var(--heading-S);
+    padding: var(--padding-S) var(--padding-L);
+    border-radius: var(--border-radius-S);
+  }
+
+  .top-navigation {
+    padding: 0 var(--padding-S);
+  }
+}
+
+@media (max-width: 575px) {
+  .right-market-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+}

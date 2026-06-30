@@ -208,3 +208,14 @@
     background-color: var(--color-text-special);
   }
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: 100%;
+  }
+
+  .sidebar-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
