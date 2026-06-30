@@ -194,6 +194,40 @@ const useItemPokemonData = (pokemonID) => {
   };
 };
 
+const usePokemonGif = (search) => {
+  const [imageURL, setImageURL] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setError(null);
+    setLoading(true);
+
+    fetch(
+      "https://api.giphy.com/v1/gifs/translate?api_key=4r0E6MFtXwGrNIyEhUMPj1yO9XKJdFA2&s=" +
+        search,
+    )
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("server error");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data.data.images.original.url);
+        setImageURL(data.data.images.original.url);
+      })
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, [search]);
+
+  return {
+    imageURL,
+    loading,
+    error,
+  };
+};
+
 const getCardPrice = (card, marketType = MARKET_TYPES[0]) => {
   if (!card[marketType]) {
     return "N/A";
@@ -246,6 +280,7 @@ export {
   useTopCards,
   useFilterData,
   useItemPokemonData,
+  usePokemonGif,
   getCardPrice,
   getLMHPrices,
 };

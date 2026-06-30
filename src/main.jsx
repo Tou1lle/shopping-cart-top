@@ -8,6 +8,7 @@ import Homepage from "./pages/Homepage.jsx";
 import Shoppage from "./pages/Shoppage.jsx";
 import ShopBody from "./components/shoppage/ShopBody.jsx";
 import ItemPage from "./pages/ItemPage.jsx";
+import AboutUsPage from "./pages/AboutUsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "item/:itemID",
         element: <ItemPage />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUsPage />,
       },
     ],
   },
