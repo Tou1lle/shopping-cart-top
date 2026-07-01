@@ -9,6 +9,7 @@ import Shoppage from "./pages/Shoppage.jsx";
 import ShopBody from "./components/shoppage/ShopBody.jsx";
 import ItemPage from "./pages/ItemPage.jsx";
 import AboutUsPage from "./pages/AboutUsPage.jsx";
+import WishlistPage from "./pages/WishlistPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "about-us",
         element: <AboutUsPage />,
+      },
+      {
+        path: "wishlist",
+        element: <WishlistPage />,
       },
     ],
   },

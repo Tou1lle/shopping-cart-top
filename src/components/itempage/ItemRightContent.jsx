@@ -2,8 +2,11 @@ import styles from "./../../styles/itempage/ItemPage.module.css";
 import { getCardPrice } from "../../utils/dataFetcher";
 import tcgplayerLogo from "./../../assets/images/tcgplayer-logo.png";
 import cardmarketLogo from "./../../assets/images/cardmarket-logo.png";
+import { useOutletContext } from "react-router";
 
 function ItemRightContent({ data, MARKET_TYPES, market, setMarket, prices }) {
+  const [wishlistItems, setWishlistItems] = useOutletContext();
+
   const logoURLs = {
     [MARKET_TYPES[0]]: tcgplayerLogo,
     [MARKET_TYPES[1]]: cardmarketLogo,
@@ -112,7 +115,20 @@ function ItemRightContent({ data, MARKET_TYPES, market, setMarket, prices }) {
         </div>
       </div>
       <div className={styles["right-btns-container"]}>
-        <button className={`${styles["btn-wishlist"]}`}>Add to wishlist</button>
+        <button 
+          className={`${styles["btn-wishlist"]}`}
+          onClick={() => {
+            if (wishlistItems.includes(data.id)) {
+              alert("Already in wishlist!");
+              return;
+            }
+            const copy = wishlistItems.slice();
+            copy.push(data.id);
+            setWishlistItems(copy);
+          }}
+        >
+          Add to wishlist
+        </button>
         <button className={`${styles["btn-cart"]}`}>Add to cart</button>
       </div>
     </div>

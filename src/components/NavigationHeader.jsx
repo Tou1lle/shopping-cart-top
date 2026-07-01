@@ -17,7 +17,7 @@ function Navigation() {
         About Us
       </Link>
       <Link
-        to={"wish-list"}
+        to={"wishlist"}
         className={`link ${styles["link-header-navigation"]}`}
       >
         <svg
